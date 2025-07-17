@@ -1,1 +1,49 @@
 @import "tailwindcss";
+
+@layer 
+base
+ {
+  *, *::before, *::after {
+    
+box-sizing
+: border-box;
+  }
+
+  * {
+    
+margin
+: 0;
+    
+padding
+: 0;
+    
+box-sizing
+: border-box;
+  }
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Variable.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Frunchy';
+  src: url('/fonts/Frunchy.ttf') format('truetype');
+}
+
+@theme{
+    --color-main: #ffffff;
+    --text-secondary: #C3C3C3;
+    --font-satoshi: Satoshi;
+}
+
+
+
+
+body{
+    background-color: #101010;
+    color: white;
+    font-family: Frunchy;
+}

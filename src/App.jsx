@@ -1,8 +1,20 @@
+import Lenis from 'lenis'
+import Button from './components/Button';
+import Main from './sites/Home/Main';
+
 
 
 function App() {
+
+const lenis = new Lenis({
+  autoRaf: true,
+});
+
   return(
-    <p className="text-center">HELOŁ</p>
+    <>
+      <Main />
+      <div className="h-[100dvh]"></div>
+    </>
   )
 }
 
