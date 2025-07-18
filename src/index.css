@@ -47,3 +47,20 @@ body{
     color: white;
     font-family: Frunchy;
 }
+
+
+
+@keyframes circularMotion {
+  0%   { transform: translateX(0vw) translateY(-12dvh); }
+  25%  { transform: translateX(12vw) translateY(0); }
+  50%  { transform: translateX(0vw) translateY(12dvh); }
+  75%  { transform: translateX(-12vw) translateY(0); }
+  100% { transform: translateX(0vw) translateY(-12dvh); }
+}
+
+
+@media (max-width: 1023px) {
+  .auto-motion {
+    animation: circularMotion 12s linear infinite;
+  }
+}

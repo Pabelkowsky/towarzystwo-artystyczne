@@ -1,6 +1,6 @@
 import Lenis from 'lenis'
-import Button from './components/Button';
 import Main from './sites/Home/Main';
+import About from './sites/Home/About';
 
 
 
@@ -13,7 +13,9 @@ const lenis = new Lenis({
   return(
     <>
       <Main />
+      <About />
       <div className="h-[100dvh]"></div>
+
     </>
   )
 }
