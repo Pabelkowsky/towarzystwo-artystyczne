@@ -37,6 +37,7 @@ box-sizing
     --color-main: #ffffff;
     --text-secondary: #C3C3C3;
     --font-satoshi: Satoshi;
+
 }
 
 
@@ -64,3 +65,37 @@ body{
     animation: circularMotion 12s linear infinite;
   }
 }
+
+
+
+
+@keyframes loopScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 6vw));
+  }
+}
+.slider {
+animation: loopScroll 12s linear infinite;
+}
+
+.gradient1{
+  background: linear-gradient(to right, #101010 20%, #10101000);
+}
+.gradient2{
+  background: linear-gradient(to left, #101010 20%, #10101000);
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -13,15 +13,15 @@ export default function About() {
     offset: ['start end', 'end start'], // animuje przez całą długość sekcji
   });
 
-  const overlayWidth = useTransform(scrollYProgress, [0, 0.4], ['100%', '0%']);
-  const headingY = useTransform(scrollYProgress, [0, 0.4], ['100%', '0%']);
+  const overlayWidth = useTransform(scrollYProgress, [-0.1, 0.5], ['100%', '0%']);
+  const headingY = useTransform(scrollYProgress, [0, 0.4], ['150%', '0%']);
 
   return (
     <section ref={ref}>
       <div>
         {/* Duże ekrany */}
         <div className="hidden lg:flex relative pl-[9vw] 2xl:pl-[20vw] gap-[6vw]">
-          <div className="flex flex-col text-right lg:text-left overflow-hidden 2xl:text-[8vw] lg:text-[10vw] sm:text-[12vw] text-[18vw] leading-[0.75]">
+          <h2 className="flex flex-col text-right lg:text-left overflow-hidden 2xl:text-[8vw] lg:text-[10vw] sm:text-[12vw] text-[18vw] leading-[0.75]">
             {['Dwa zdania', 'o nas'].map((line, i) => (
               <div key={i} className="overflow-hidden">
                 <motion.span style={{ y: headingY }} className="block w-full">
@@ -29,7 +29,7 @@ export default function About() {
                 </motion.span>
               </div>
             ))}
-          </div>
+          </h2>
           <div className="relative 2xl:w-[35vw] w-[40vw] 2xl:h-[20vw] h-[24vw] overflow-hidden">
             <img
               src={img1}
@@ -66,6 +66,8 @@ export default function About() {
           </div>
         </div>
 
+
+
         {/* Mobile / Tablet */}
         <div className="flex flex-col gap-[5vw] lg:hidden">
           <div className="flex justify-center gap-[5vw]">
@@ -81,7 +83,7 @@ export default function About() {
               />
             </div>
             <div className="flex flex-col w-[60vw] gap-[6vw] sm:gap-[1vw]">
-              <div className="flex flex-col overflow-hidden 2xl:text-[8vw] lg:text-[10vw] sm:text-[12vw] text-[15vw] leading-[0.75]">
+              <h2 className="flex flex-col overflow-hidden 2xl:text-[8vw] lg:text-[10vw] sm:text-[12vw] text-[15vw] leading-[0.75]">
                 {['Dwa zdania', 'o nas'].map((line, i) => (
                   <div key={i} className="overflow-hidden">
                     <motion.span style={{ y: headingY }} className="block">
@@ -89,7 +91,7 @@ export default function About() {
                     </motion.span>
                   </div>
                 ))}
-              </div>
+              </h2>
               <p className="text-[3.5vw] sm:text-[2vw] font-satoshi leading-[1.1] tracking-[-1%] text-[#C3C3C3]">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
