@@ -5,10 +5,11 @@ import ArtistGroups from './ArtistGroups';
 import JoinUs from './JoinUs';
 import SupportUs from './SupportUs';
 import Contact from './Contact';
-import Footer from './Footer';
-import Navbar from './Navbar';
+import Footer from '../../components/Footer';
+import Navbar from '../../components/Navbar';
 
 import LenisWrapper from '../../components/LenisWrapper';
+import ScrollProgress from '../../components/ScrollProgress';
 
 
 
@@ -27,6 +28,7 @@ export default function Home() {
       <SupportUs />
       <Contact />
       <Footer />
+      <ScrollProgress />
     </LenisWrapper>
     </>
   )

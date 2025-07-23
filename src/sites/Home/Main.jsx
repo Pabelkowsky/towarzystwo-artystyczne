@@ -72,7 +72,7 @@ export default function Main() {
     };
 
     const getRotation = (imgX, imgY) => {
-        const maxRotation = 3; // maksymalna rotacja w stopniach
+        const maxRotation = 4; // maksymalna rotacja w stopniach
 
         const dx = mouse.x - imgX;
         const dy = mouse.y - imgY;

@@ -6,7 +6,7 @@ export default function Footer() {
   const navItems = [
     { label: 'Strona główna', path: '/' },
     { label: 'Nowości', path: '/nowosci' },
-    { label: 'Jak dołączyć', path: '/jak-dolaczyc' },
+    { label: 'Jak dołączyć', path: '/dolacz-do-nas' },
     { label: 'Rękodzieło', path: '/rekodzielo' },
     { label: 'Literatura', path: '/literatura' },
     { label: 'Film i fotografia', path: '/film-i-fotografia' },
@@ -24,7 +24,7 @@ export default function Footer() {
   const phones = ['790-558-571', '790-558-571', '790-558-571'];
 
   return (
-    <section className="bg-[#090909] overflow-hidden py-[4vw] sm:py-[2vw]">
+    <section className="bg-[#090909] overflow-hidden py-[4vw] sm:py-[2vw] mt-[15vw] sm:mt-[10vw]">
       <div className="flex flex-col items-center gap-[12vw] sm:gap-[10vw] lg:gap-[5vw] relative">
         <p className="text-[15vw] sm:text-[8.5vw] leading-[0.9]">Porozmawiajmy</p>
 

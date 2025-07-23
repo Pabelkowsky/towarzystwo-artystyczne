@@ -26,7 +26,7 @@ export default function Contact() {
   return (
     <section
       ref={sectionRef}
-      className="pt-[20vw] sm:pt-[10vw] mb-[15vw] sm:mb-[10vw]"
+      className="pt-[20vw] sm:pt-[10vw]"
       id='contact'
     >
       <div className="relative flex pr-[5vw] pl-[5vw] lg:justify-start justify-center">

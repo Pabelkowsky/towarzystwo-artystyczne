@@ -39,7 +39,7 @@ export default function Navbar() {
   const navItems = [
     { label: 'Strona główna', path: '/' },
     { label: 'Nowości', path: '/nowosci' },
-    { label: 'Jak dołączyć', path: '/jak-dolaczyc' },
+    { label: 'Jak dołączyć', path: '/dolacz-do-nas' },
     { label: 'Rękodzieło', path: '/rekodzielo' },
     { label: 'Literatura', path: '/literatura' },
     { label: 'Film i fotografia', path: '/film-i-fotografia' },
