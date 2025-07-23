@@ -98,4 +98,25 @@ animation: loopScroll 12s linear infinite;
 
 
 
+@layer utilities {
+  .link-underline {
+    position: relative;
+    display: inline-block;
+  }
+
+  .link-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background-color: currentColor;
+    transition: width 0.5s cubic-bezier(0.75, 0, 0.25, 1);
+  }
+
+  .link-underline:hover::after {
+    width: 100%;
+  }
+}
 

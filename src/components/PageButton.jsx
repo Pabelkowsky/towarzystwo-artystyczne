@@ -1,15 +1,21 @@
-import { useOutletContext } from 'react-router-dom';
-
-export default function Button({ text = "Kliknij", bg = false, href = "#" }) {
-  const { handleNavigate } = useOutletContext();
-  
-  const style = {
-    backgroundColor: bg ? "#101010" : "transparent",
-  };
-
+export default function PageButton({ text = "Dowiedz się więcej", targetId = "", offset = -100, bg = false }) {
   const handleClick = (e) => {
     e.preventDefault();
-    handleNavigate(href);
+
+    const target = document.getElementById(targetId);
+    if (target) {
+      const yOffset = offset;
+      const y = target.getBoundingClientRect().top + window.scrollY + yOffset;
+
+      window.scrollTo({
+        top: y,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const style = {
+    backgroundColor: bg ? "#101010" : "transparent",
   };
 
   return (

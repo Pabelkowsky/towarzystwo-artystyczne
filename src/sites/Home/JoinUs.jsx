@@ -16,9 +16,9 @@ export default function JoinUs() {
     offset: ['start start', 'end end'],
   });
 
-  const headingY = useTransform(scrollYProgress, [0.4, 0.8], ['150%', '0%']);
-  const fadeIn = useTransform(scrollYProgress, [0.6, 0.8], [0, 1]);
-  const elementY = useTransform(scrollYProgress, [0.6, 0.8], ['100%', '0%']);
+  const headingY = useTransform(scrollYProgress, [0.4, 0.9], ['150%', '0%']);
+  const fadeIn = useTransform(scrollYProgress, [0.6, 0.9], [0, 1]);
+  const elementY = useTransform(scrollYProgress, [0.6, 0.9], ['100%', '0%']);
 
   const [screenWidth, setScreenWidth] = useState(() => window.innerWidth);
 
@@ -104,7 +104,7 @@ export default function JoinUs() {
 
             {/* ANIMOWANY BUTTON */}
             <motion.div style={{ y: elementY, opacity: fadeIn }} className="z-20">
-              <Button text="Dołącz do nas" />
+              <Button text="Dołącz do nas" href='/dolacz-do-nas'/>
             </motion.div>
 
             {/* OBRAZY */}
