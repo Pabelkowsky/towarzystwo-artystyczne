@@ -10,7 +10,7 @@ export default function About() {
   const headingRef = useRef();
   const mobileHeadingRef = useRef();
 
-  const isInView = useInView(headingRef, { margin: '0% 0px' }); // nie używamy once: true
+  const isInView = useInView(headingRef, { margin: '-20% 0px' });
   const isMobileInView = useInView(mobileHeadingRef, { margin: '0% 0px' });
 
   const headingVariants = {
@@ -27,11 +27,10 @@ export default function About() {
 
   return (
     <section ref={ref} id='about'>
-      <div>
+      <div  ref={headingRef}>
         {/* Duże ekrany */}
         <div className="hidden lg:flex relative pl-[9vw] 2xl:pl-[20vw] gap-[6vw]">
           <h2
-            ref={headingRef}
             className="flex flex-col text-right lg:text-left overflow-hidden 2xl:text-[8vw] lg:text-[10vw] sm:text-[12vw] text-[18vw] leading-[0.75]"
           >
             {['Dwa zdania', 'o nas'].map((line, i) => (
@@ -40,7 +39,7 @@ export default function About() {
                   variants={headingVariants}
                   initial="hidden"
                   animate={isInView ? 'visible' : 'hidden'}
-                  transition={{ duration: 1, ease: [0.75, 0, 0.25, 1]}}
+                  transition={{ duration: 1, ease: [0.75, 0, 0.25, 1] }}
                   className="block w-full"
                 >
                   {line}
@@ -74,13 +73,24 @@ export default function About() {
             />
           </div>
           <div className="ml-[5vw] 2xl:ml-[8.2vw] flex flex-col gap-[2vw] 2xl:gap-[2vw] self-end translate-y-[-3vw]">
-            <p className="2xl:text-[1.1vw] text-[1.5vw] font-satoshi leading-[1.1] tracking-[-1%] w-[40vw] 2xl:w-[30vw] text-[#C3C3C3]">
+            <motion.p
+              initial={{ y: 100, opacity: 0 }}
+              animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+              transition={{ duration: 1, ease: [0.75, 0, 0.25, 1], delay: 0.2 }}
+              className="2xl:text-[1.1vw] text-[1.5vw] font-satoshi leading-[1.1] tracking-[-1%] w-[40vw] 2xl:w-[30vw] text-[#C3C3C3]"
+            >
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book.
-            </p>
-            <Button href='/dolacz-do-nas' text="Dołącz do nas" />
+            </motion.p>
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+              transition={{ duration: 1, ease: [0.75, 0, 0.25, 1], delay: 0.35 }}
+            >
+              <Button href="/dolacz-do-nas" text="Dołącz do nas" />
+            </motion.div>
           </div>
         </div>
 
@@ -109,7 +119,7 @@ export default function About() {
                       variants={headingVariants}
                       initial="hidden"
                       animate={isMobileInView ? 'visible' : 'hidden'}
-                      transition={{ duration: 1, ease: [0.75, 0, 0.25, 1]}}
+                      transition={{ duration: 1, ease: [0.75, 0, 0.25, 1] }}
                       className="block"
                     >
                       {line}
@@ -117,14 +127,24 @@ export default function About() {
                   </div>
                 ))}
               </h2>
-              <p className="text-[3.5vw] sm:text-[2vw] font-satoshi leading-[1.1] tracking-[-1%] text-[#C3C3C3]">
+              <motion.p
+                initial={{ y: 100, opacity: 0 }}
+                animate={isMobileInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                transition={{ duration: 1, ease: [0.75, 0, 0.25, 1], delay: 0.2 }}
+                className="text-[3.5vw] sm:text-[2vw] font-satoshi leading-[1.1] tracking-[-1%] text-[#C3C3C3]"
+              >
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s.
-              </p>
-              <div className="sm:mt-[4vw]">
-                <Button href='/dolacz-do-nas' text="Dołącz do nas" />
-              </div>
+              </motion.p>
+              <motion.div
+                initial={{ y: 100, opacity: 0 }}
+                animate={isMobileInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                transition={{ duration: 1, ease: [0.75, 0, 0.25, 1], delay: 0.35 }}
+                className="sm:mt-[4vw]"
+              >
+                <Button href="/dolacz-do-nas" text="Dołącz do nas" />
+              </motion.div>
             </div>
           </div>
 

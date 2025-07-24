@@ -50,8 +50,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-40 pointer-events-none transition-colors duration-300 ${
-        scrolled ? 'lg:bg-[#10101000] bg-[#101010]' : 'bg-transparent'
+      className={`fixed top-0 w-full z-40 pointer-events-none transition-colors duration-300
       }`}
     >
       {/* Overlay menu */}

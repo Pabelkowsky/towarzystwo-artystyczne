@@ -20,6 +20,10 @@ padding
 box-sizing
 : border-box;
   }
+
+   img {
+    filter: brightness(0.9);
+  }
 }
 
 @font-face {

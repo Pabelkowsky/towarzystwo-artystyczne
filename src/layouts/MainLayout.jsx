@@ -20,7 +20,7 @@ export default function MainLayout() {
       const timer = setTimeout(() => {
         navigate(transitioningTo);
         setTransitioningTo(null);
-      }, 600);
+      }, 1150);
       return () => clearTimeout(timer);
     }
   }, [transitioningTo]);
@@ -31,10 +31,6 @@ export default function MainLayout() {
       <AnimatePresence mode="wait">
         <motion.div
           key={location.pathname}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
         >
           {/* context-free way to provide navigation handler to all children */}
           <Outlet context={{ handleNavigate }} />

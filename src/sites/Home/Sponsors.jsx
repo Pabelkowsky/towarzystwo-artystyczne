@@ -37,18 +37,25 @@ export default function Sponsors() {
 
           <div className="slider flex flex-shrink-0 overflow-hidden gap-[6vw]">
             {Array(9).fill(0).map((_, i) => (
-              <img key={i} src={logo1} alt="" className="h-[10vw] sm:h-[6vw] lg:h-[5vw]" />
+              <img key={i} src={logo1} alt="" className="h-[10vw] sm:h-[6vw] lg:h-[5vw] brightness-[1]" />
             ))}
           </div>
 
           <div className="slider flex flex-shrink-0 overflow-hidden gap-[6vw]">
             {Array(9).fill(0).map((_, i) => (
-              <img key={i} src={logo1} alt="" className="h-[10vw] sm:h-[6vw] lg:h-[5vw]" />
+              <img key={i} src={logo1} alt="" className="h-[10vw] sm:h-[6vw] lg:h-[5vw] brightness-[1]" />
             ))}
           </div>
         </div>
 
-        <PageButton text='Wesprzyj nas' targetId='support-us'/>
+        <motion.div
+  initial={{ y: 100, opacity: 0 }}
+  animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+  transition={{ duration: 1, ease: [0.75, 0, 0.25, 1], delay: 0.35 }}
+>
+  <PageButton text="Wesprzyj nas" targetId="support-us" />
+</motion.div>
+
         
       </div>
     </section>
