@@ -76,7 +76,7 @@ export default function About() {
             <motion.p
               initial={{ y: 100, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
-              transition={{ duration: 1, ease: [0.75, 0, 0.25, 1], delay: 0.2 }}
+              transition={{ duration: 1, ease: [0.75, 0, 0.25, 1], delay: 0 }}
               className="2xl:text-[1.1vw] text-[1.5vw] font-satoshi leading-[1.1] tracking-[-1%] w-[40vw] 2xl:w-[30vw] text-[#C3C3C3]"
             >
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -87,7 +87,7 @@ export default function About() {
             <motion.div
               initial={{ y: 100, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
-              transition={{ duration: 1, ease: [0.75, 0, 0.25, 1], delay: 0.35 }}
+              transition={{ duration: 1, ease: [0.75, 0, 0.25, 1], delay: 0.05 }}
             >
               <Button href="/dolacz-do-nas" text="Dołącz do nas" />
             </motion.div>
@@ -130,7 +130,7 @@ export default function About() {
               <motion.p
                 initial={{ y: 100, opacity: 0 }}
                 animate={isMobileInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
-                transition={{ duration: 1, ease: [0.75, 0, 0.25, 1], delay: 0.2 }}
+                transition={{ duration: 1, ease: [0.75, 0, 0.25, 1], delay: 0 }}
                 className="text-[3.5vw] sm:text-[2vw] font-satoshi leading-[1.1] tracking-[-1%] text-[#C3C3C3]"
               >
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -140,7 +140,7 @@ export default function About() {
               <motion.div
                 initial={{ y: 100, opacity: 0 }}
                 animate={isMobileInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
-                transition={{ duration: 1, ease: [0.75, 0, 0.25, 1], delay: 0.35 }}
+                transition={{ duration: 1, ease: [0.75, 0, 0.25, 1], delay: 0.05 }}
                 className="sm:mt-[4vw]"
               >
                 <Button href="/dolacz-do-nas" text="Dołącz do nas" />
