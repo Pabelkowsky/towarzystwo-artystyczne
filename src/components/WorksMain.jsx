@@ -15,6 +15,9 @@ export default function WorksMain({ img1, img2, img3, heading = [], description 
 
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] });
   const scrollTranslate = useTransform(scrollYProgress, [0, 1], ['0vw', '10vw']);
+  const img1Translate = useTransform(scrollYProgress, [0, 1], ['0%', '-50%']);
+  const img3Translate = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
+
 
   const imgSrc1 = getImage(img1);
   const imgSrc2 = getImage(img2);
@@ -31,10 +34,11 @@ export default function WorksMain({ img1, img2, img3, heading = [], description 
           {/* LEFT IMAGE */}
           <div className="w-[17vw] 2xl:w-[15%] items-end flex relative overflow-hidden">
             {imgSrc1 && (
-              <img
+              <motion.img
                 src={imgSrc1}
-                alt=""
+                alt="Zdjęcie artystyczne"
                 className="relative z-10 w-full h-[15vw] object-cover brightness-[0.4]"
+                style={{ y: img1Translate }}
               />
             )}
             <motion.div
@@ -51,7 +55,7 @@ export default function WorksMain({ img1, img2, img3, heading = [], description 
               {imgSrc2 && (
                 <img
                   src={imgSrc2}
-                  alt=""
+                  alt="Zdjęcie artystyczne"
                   className="object-cover brightness-[0.4] absolute w-full h-full"
                 />
               )}
@@ -89,9 +93,10 @@ export default function WorksMain({ img1, img2, img3, heading = [], description 
           <div className="w-[17vw] 2xl:w-[15%] flex flex-col justify-between relative">
             <div className="relative w-full overflow-hidden">
               {imgSrc3 && (
-                <img
+                <motion.img
                   src={imgSrc3}
-                  alt=""
+                  style={{ y: img3Translate }}
+                  alt="Zdjęcie artystyczne"
                   className="relative z-10 w-full h-[15vw] object-cover brightness-[0.4] self-start"
                 />
               )}
@@ -119,7 +124,7 @@ export default function WorksMain({ img1, img2, img3, heading = [], description 
             {imgSrc2 && (
               <img
                 src={imgSrc2}
-                alt=""
+                alt="Zdjęcie artystyczne"
                 className="w-full h-full object-cover absolute brightness-[0.4]"
               />
             )}

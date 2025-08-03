@@ -93,7 +93,7 @@ export default function Navbar() {
       {/* Górny pasek z logo i przyciskiem menu */}
       <div className="w-full flex justify-between items-center px-[5vw] py-[15px] lg:py-[20px] relative z-20 pointer-events-auto">
         <div onClick={() => handleNavigate('/')} className="cursor-pointer">
-          <img src={logo} alt="Logo" className="h-[25px] lg:h-[50px]" />
+          <img src={logo} alt="Logo" className="h-[25px] lg:h-[35px] xl:h-[50px]" />
         </div>
 
         <button
@@ -103,9 +103,9 @@ export default function Navbar() {
           aria-label="Toggle menu"
         >
           <div className="pr-[5px] lg:pr-[10px] pl-[15px] py-[3px] lg:pl-[20px] lg:py-[8px] flex items-center justify-center font-satoshi gap-[20px] bg-[#F9F9F9] rounded-full cursor-pointer">
-            <p className="font-satoshi text-[18px] lg:text-[30px] text-[#101010]">Menu</p>
-            <div className="lg:w-[50px] w-[35px] h-[35px] lg:h-[50px] bg-[#24211F] rounded-full flex justify-center items-center relative">
-              <div className="w-[15px] lg:w-[20px] h-[16px] flex flex-col justify-between z-20 relative transition-all duration-300 ease-in-out">
+            <p className="font-satoshi text-[18px] lg:text-[22px] xl:text-[30px] text-[#101010]">Menu</p>
+            <div className="xl:w-[50px] lg:w-[40px] w-[35px] aspect-square bg-[#24211F] rounded-full flex justify-center items-center relative">
+              <div className="w-[15px] lg:w-[18px] xl:w-[20px] h-[16px] flex flex-col justify-between z-20 relative transition-all duration-300 ease-in-out">
                 {/* Hamburger lines */}
                 <div
                   className={`absolute top-1/2 left-0 w-full h-[2px] lg:h-[2.5px] bg-[#f4f4f4] rounded-full transform transition-all duration-300 ease-in-out ${

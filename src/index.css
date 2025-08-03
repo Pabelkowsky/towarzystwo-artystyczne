@@ -45,6 +45,23 @@ box-sizing
 }
 
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ff000000; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fcfcfc; 
+  border-radius: 100px;
+}
+
+
+
 
 
 body{

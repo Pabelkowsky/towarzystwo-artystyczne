@@ -5,7 +5,7 @@ import PageButton from '../../components/PageButton'
 
 export default function Sponsors() {
   const ref = useRef();
-  const isInView = useInView(ref, { margin: '0% 0px' });
+  const isInView = useInView(ref, { margin: '0% 0px', once:true });
 
   const headingVariants = {
     hidden: { y: '100%', opacity: 1 },
@@ -37,13 +37,13 @@ export default function Sponsors() {
 
           <div className="slider flex flex-shrink-0 overflow-hidden gap-[6vw]">
             {Array(9).fill(0).map((_, i) => (
-              <img key={i} src={logo1} alt="" className="h-[10vw] sm:h-[6vw] lg:h-[5vw] brightness-[1]" />
+              <img key={i} src={logo1} alt={`Logo ${i}`} className="h-[10vw] sm:h-[6vw] lg:h-[5vw] brightness-[1]" />
             ))}
           </div>
 
           <div className="slider flex flex-shrink-0 overflow-hidden gap-[6vw]">
             {Array(9).fill(0).map((_, i) => (
-              <img key={i} src={logo1} alt="" className="h-[10vw] sm:h-[6vw] lg:h-[5vw] brightness-[1]" />
+              <img key={i} src={logo1} alt={`Logo ${i}`} className="h-[10vw] sm:h-[6vw] lg:h-[5vw] brightness-[1]" />
             ))}
           </div>
         </div>

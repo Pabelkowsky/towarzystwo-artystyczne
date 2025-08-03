@@ -10,8 +10,8 @@ export default function About() {
   const headingRef = useRef();
   const mobileHeadingRef = useRef();
 
-  const isInView = useInView(headingRef, { margin: '-20% 0px' });
-  const isMobileInView = useInView(mobileHeadingRef, { margin: '0% 0px' });
+  const isInView = useInView(headingRef, { margin: '-20% 0px', once:true });
+  const isMobileInView = useInView(mobileHeadingRef, { margin: '0% 0px', once:true });
 
   const headingVariants = {
     hidden: { y: '100%', opacity: 1 },
@@ -51,6 +51,7 @@ export default function About() {
             <img
               src={img1}
               alt="Szał uniesień"
+               loading='lazy'
               className="w-full h-full object-cover translate-y-[-1vw]"
             />
             <motion.div
@@ -65,6 +66,7 @@ export default function About() {
             <img
               src={img2}
               alt="Śmierć Ellenai"
+               loading='lazy'
               className="w-full h-full object-cover translate-y-[-3vw]"
             />
             <motion.div
@@ -79,10 +81,7 @@ export default function About() {
               transition={{ duration: 1, ease: [0.75, 0, 0.25, 1], delay: 0 }}
               className="2xl:text-[1.1vw] text-[1.5vw] font-satoshi leading-[1.1] tracking-[-1%] w-[40vw] 2xl:w-[30vw] text-[#C3C3C3]"
             >
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              Jesteśmy stowarzyszeniem artystów, które powstało z pasji do tworzenia i wspierania różnych form sztuki. Naszą misją jest połączenie twórców oraz promowanie ich prac w naszej społeczności i poza nią.
             </motion.p>
             <motion.div
               initial={{ y: 100, opacity: 0 }}
@@ -100,7 +99,8 @@ export default function About() {
             <div className="relative w-[25vw] h-[77vw] sm:h-[43.5vw] overflow-hidden">
               <img
                 src={img1}
-                alt=""
+                alt="Szał uniesień"
+                 loading='lazy'
                 className="w-full h-full object-cover"
               />
               <motion.div
@@ -133,9 +133,7 @@ export default function About() {
                 transition={{ duration: 1, ease: [0.75, 0, 0.25, 1], delay: 0 }}
                 className="text-[3.5vw] sm:text-[2vw] font-satoshi leading-[1.1] tracking-[-1%] text-[#C3C3C3]"
               >
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s.
+              Jesteśmy stowarzyszeniem artystów, które powstało z pasji do tworzenia i wspierania różnych form sztuki. Naszą misją jest połączenie twórców oraz promowanie ich prac w naszej społeczności i poza nią.
               </motion.p>
               <motion.div
                 initial={{ y: 100, opacity: 0 }}
@@ -151,7 +149,8 @@ export default function About() {
           <div className="relative flex justify-center w-full overflow-hidden">
             <img
               src={img2}
-              alt=""
+              alt="Śmierć Ellenai"
+               loading='lazy'
               className="w-[90vw] h-[40vw] object-cover"
             />
             <motion.div

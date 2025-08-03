@@ -13,7 +13,7 @@ import img6 from '../../assets/sztuka-cyfrowa.png';
 
 export default function ArtistGroups() {
   const ref = useRef();
-  const isInView = useInView(ref, { margin: '0% 0px' });
+  const isInView = useInView(ref, { margin: '0% 0px', once:true });
   const { handleNavigate } = useOutletContext();
 
   const { scrollYProgress } = useScroll({
@@ -36,7 +36,7 @@ export default function ArtistGroups() {
       onClick={() => handleNavigate(href)}
       className="cursor-pointer w-[60vw] sm:w-[45vw] lg:w-[28.5vw] xl:w-[20vw] flex justify-center items-end pb-[2vw] lg:pb-[1vw] aspect-square relative"
     >
-      <img src={img} alt={text} className="absolute object-cover left-0 top-0 w-full h-full" />
+      <img src={img} alt={text} loading='lazy' className="absolute object-cover left-0 top-0 w-full h-full" />
       <Button text={text} bg={true} href={href} />
     </motion.div>
   );
@@ -45,7 +45,7 @@ export default function ArtistGroups() {
     <section className="pt-[35vw] lg:pt-[15vw]">
       <div ref={ref}>
         <h4 className="pl-[5vw] flex flex-col overflow-hidden 2xl:text-[8vw] lg:text-[10vw] sm:text-[12vw] text-[15vw] leading-[0.75]">
-          {['Nasze dziedziny', 'artystyczne'].map((line, i) => (
+          {['Nasze obszary', 'twórczości'].map((line, i) => (
             <div key={i} className="overflow-hidden">
               <motion.span
                 initial={{ y: '100%' }}

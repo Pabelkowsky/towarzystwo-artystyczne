@@ -9,13 +9,13 @@ import img5 from '../../assets/muzyka.jpg';
 import img6 from '../../assets/sztuka-cyfrowa.png';
 import DownloadButton from "../../components/DownloadButton";
 
-function OverlayedImage({ src, className }) {
+function OverlayedImage({ src, className, alt }) {
   const ref = useRef();
   const isInView = useInView(ref, { margin: '0%', once: true });
 
   return (
     <div ref={ref} className={`absolute overflow-hidden ${className}`}>
-      <img src={src} alt="" className="w-full h-full object-cover" />
+      <img src={src} alt={alt} className="w-full h-full object-cover" />
       <motion.div
         initial={{ height: '100%' }}
         animate={isInView ? { height: 0 } : { height: '100%' }}
@@ -28,22 +28,20 @@ function OverlayedImage({ src, className }) {
 
 export default function Main() {
   const ref = useRef();
-  const isInView = useInView(ref, { margin: '0%', once: false });
+  const isInView = useInView(ref, { margin: '0%', once: true });
 
   return (
     <main
       ref={ref}
-      className="sm:gap-0 gap-[1vw] 2xl:pt-[250px] sm:pt-[200px] lg:pt-[200px] pt-[220px] flex flex-col text-center relative items-center pb-[35vw] sm:pb-[27vw] lg:pb-[15vw] xl:pb-[15vw] overflow-hidden"
+      className="sm:gap-0 gap-[1vw] 2xl:pt-[180px] sm:pt-[120px] lg:pt-[150px] pt-[220px] flex flex-col text-center relative items-center pb-[35vw] sm:pb-[27vw] lg:pb-[15vw] xl:pb-[15vw] overflow-hidden"
     >
-      {/* Obrazki z overlayem */}
-      <OverlayedImage src={img1} className="w-[28vw] sm:w-[17vw] lg:w-[15vw] translate-x-[-48vw] translate-y-[-29vw] sm:translate-x-[-43vw] sm:translate-y-[-3vw] lg:translate-x-[-39vw] 2xl:translate-x-[-35vw] lg:translate-y-[-3vw] 2xl:translate-y-[-3vw]" />
-      <OverlayedImage src={img2} className="w-[22vw] sm:w-[14vw] lg:w-[12vw] translate-x-[-45vw] translate-y-[54vw] sm:translate-x-[-35vw] sm:translate-y-[34vw] lg:translate-x-[-38vw] 2xl:translate-x-[-32vw] lg:translate-y-[24vw] 2xl:translate-y-[20vw]" />
-      <OverlayedImage src={img3} className="w-[22vw] sm:w-[16vw] lg:w-[11vw] translate-x-[40vw] translate-y-[55vw] sm:translate-x-[-3vw] sm:translate-y-[50vw] lg:translate-x-[-2vw] lg:translate-y-[35vw] 2xl:translate-y-[27vw]" />
-      <OverlayedImage src={img4} className="w-[25vw] sm:w-[16vw] lg:w-[14vw] translate-x-[0] translate-y-[-33vw] sm:translate-x-[44vw] sm:translate-y-[-5vw] lg:translate-x-[40vw] 2xl:translate-x-[36vw] lg:translate-y-[-1vw] 2xl:translate-y-[-4vw]" />
-      <OverlayedImage src={img5} className="w-[26vw] sm:w-[17vw] lg:w-[15vw] translate-y-[70vw] sm:translate-x-[36vw] sm:translate-y-[35vw] lg:translate-x-[32vw] 2xl:translate-x-[28vw] lg:translate-y-[26vw] 2xl:translate-y-[22vw]" />
-      <OverlayedImage src={img6} className="block sm:hidden w-[16vw] translate-x-[46vw] translate-y-[-29vw]" />
+      <OverlayedImage src={img1} alt="Rękodzieło" className="w-[28vw] sm:w-[17vw] lg:w-[15vw] translate-x-[-48vw] translate-y-[-29vw] sm:translate-x-[-43vw] sm:translate-y-[-3vw] lg:translate-x-[-39vw] 2xl:translate-x-[-35vw] lg:translate-y-[-3vw] 2xl:translate-y-[-3vw]" />
+      <OverlayedImage src={img2} alt="Literatura" className="w-[22vw] sm:w-[14vw] lg:w-[12vw] translate-x-[-45vw] translate-y-[54vw] sm:translate-x-[-35vw] sm:translate-y-[34vw] lg:translate-x-[-38vw] 2xl:translate-x-[-32vw] lg:translate-y-[24vw] 2xl:translate-y-[20vw]" />
+      <OverlayedImage src={img3} alt="Film i fotografia" className="w-[22vw] sm:w-[16vw] lg:w-[11vw] translate-x-[40vw] translate-y-[55vw] sm:translate-x-[-3vw] sm:translate-y-[50vw] lg:translate-x-[-2vw] lg:translate-y-[35vw] 2xl:translate-y-[27vw]" />
+      <OverlayedImage src={img4} alt="Malarstwo" className="w-[25vw] sm:w-[16vw] lg:w-[14vw] translate-x-[0] translate-y-[-33vw] sm:translate-x-[44vw] sm:translate-y-[-5vw] lg:translate-x-[40vw] 2xl:translate-x-[36vw] lg:translate-y-[-1vw] 2xl:translate-y-[-4vw]" />
+      <OverlayedImage src={img5} alt="Muzyka" className="w-[26vw] sm:w-[17vw] lg:w-[15vw] translate-y-[70vw] sm:translate-x-[36vw] sm:translate-y-[35vw] lg:translate-x-[32vw] 2xl:translate-x-[28vw] lg:translate-y-[26vw] 2xl:translate-y-[22vw]" />
+      <OverlayedImage src={img6} alt="Sztuka cyfrowa" className="block sm:hidden w-[16vw] translate-x-[46vw] translate-y-[-29vw]" />
 
-      {/* Nagłówek */}
       <h1 className="2xl:text-[8vw] lg:text-[10vw] sm:text-[12vw] text-[14vw] leading-[0.75] text-center flex flex-col items-center justify-center relative z-30">
         {['Zostań częścią', 'naszej społeczności'].map((line, i) => (
           <div key={i} className="overflow-hidden">

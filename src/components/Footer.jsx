@@ -91,7 +91,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="text-[8.5vw] leading-[0.9]">Limanowskie Stowarzyszenie Poetów </p>
+        <p className="text-[8vw] leading-[0.9]">Limanowskie Towarzystwo Artystyczne</p>
+
       </div>
     </section>
   );

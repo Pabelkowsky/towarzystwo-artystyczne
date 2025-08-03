@@ -37,45 +37,45 @@ export default function JoinUs() {
   const images = [
     {
       src: img1,
-      alt: 'glitch-portret',
+      alt: 'Glitch portret',
       xEnd: { base: '-40vw', lg: '-40vw', '2xl': '-35vw' },
-      yEnd: { base: '-30dvh', lg: '-20dvh', '2xl': '-20dvh' },
-      className: '2xl:w-[15vw] lg:w-[12vw] h-[18dvh] lg:h-[20dvh]',
+      yEnd: { base: '-30vh', lg: '-20vh', '2xl': '-20vh' },
+      className: '2xl:w-[15vw] lg:w-[12vw] h-[18vh] lg:h-[20vh]',
     },
     {
       src: img2,
-      alt: 'tunel',
+      alt: 'Tunel',
       xEnd: { base: '5vw', lg: '-3vw' },
-      yEnd: { base: '-37dvh', lg: '-38dvh' },
+      yEnd: { base: '-37vh', lg: '-38vh' },
       className: 'w-[38vw] lg:w-[15vw] h-[15vh]',
     },
     {
       src: img3,
-      alt: 'nowoczesna-rzezba',
+      alt: 'Nowoczesna rzeźba',
       xEnd: { base: '0vw', lg: '-4vw' },
-      yEnd: { base: '37dvh', lg: '37dvh' },
-      className: 'w-[35vw] lg:w-[15vw] h-[15dvh]',
+      yEnd: { base: '37vh', lg: '37vh' },
+      className: 'w-[35vw] lg:w-[15vw] h-[15vh]',
     },
     {
       src: img4,
-      alt: 'nowoczesna-rzezba 2',
+      alt: 'Nowoczesna rzeźba 2',
       xEnd: { base: '-40vw', lg: '-35vw' },
-      yEnd: { base: '30dvh', lg: '20dvh' },
-      className: 'w-[25vw] lg:w-[10vw] h-[20dvh] lg:h-[25dvh]',
+      yEnd: { base: '30vh', lg: '20vh' },
+      className: 'w-[25vw] lg:w-[10vw] h-[20vh] lg:h-[25vh]',
     },
     {
       src: img5,
-      alt: 'surrealistyczny-portret',
+      alt: 'Surrealistyczny portret',
       xEnd: { base: '45vw', lg: '35vw' },
-      yEnd: { base: '-28dvh', lg: '-25dvh' },
-      className: 'w-[20vw] lg:w-[10vw] h-[15dvh] lg:h-[25dvh]',
+      yEnd: { base: '-28vh', lg: '-25vh' },
+      className: 'w-[20vw] lg:w-[10vw] h-[15vh] lg:h-[25vh]',
     },
     {
       src: img6,
-      alt: 'projekt-sztuki-cyfrowej',
+      alt: 'Sztuka cyfrowa',
       xEnd: { base: '40vw', lg: '30vw' },
-      yEnd: { base: '32dvh', lg: '30dvh' },
-      className: 'w-[25vw] lg:w-[12vw] h-[20dvh] lg:h-[28vh]',
+      yEnd: { base: '32vh', lg: '30vh' },
+      className: 'w-[25vw] lg:w-[12vw] h-[20vh] lg:h-[28vh]',
     },
   ];
 
@@ -97,9 +97,9 @@ export default function JoinUs() {
             {/* ANIMOWANY TEKST */}
             <motion.p
               style={{ y: elementY, opacity: fadeIn }}
-              className="relative z-20 2xl:text-[1.1vw] lg:text-[1.5vw] text-[3.2vw] sm:text-[2vw] font-satoshi leading-[1.1] tracking-[-1%] w-[85vw] sm:w-[75vw] lg:w-[60vw] 2xl:w-[40vw] text-[#C3C3C3] xl:mt-[1vw] lg:mt-[1.5vw] xl:mb-[2vw] lg:mb-[2.5vw] mt-[2.5vw] mb-[5vw]"
+              className="relative z-20 2xl:text-[1.1vw] lg:text-[1.5vw] text-[3.2vw] sm:text-[2vw] font-satoshi leading-[1.1] tracking-[-1%] w-[85vw] sm:w-[75vw] lg:w-[60vw] 2xl:w-[40vw] text-[#C3C3C3] xl:mt-[1vw] lg:mt-[1.5vw] xl:mb-[2vw] lg:mb-[2.5vw] mt-[4vw] mb-[5vw]"
             >
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+             Zostań częścią naszej kreatywnej społeczności i dziel się pomysłami, inspiracjami oraz doświadczeniem z innymi pasjonatami.
             </motion.p>
 
             {/* ANIMOWANY BUTTON */}
@@ -120,6 +120,7 @@ export default function JoinUs() {
                   alt={img.alt}
                   style={{ x, y, opacity }}
                   className={`absolute z-10 object-cover ${img.className}`}
+                  loading='lazy'
                 />
               );
             })}
